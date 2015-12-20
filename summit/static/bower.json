@@ -1,6 +1,8 @@
 {
   "name": "summit",
   "version": "2.0.0",
+  "description": "PyWaw Summit 2016 website",
+  "repository": "https://github.com/PyWaw/2016.summit.pywaw.org",
   "dependencies": {
     "foundation": "5.5.1"
   }

@@ -1,6 +1,12 @@
 {
   "name": "summit",
+  "description": "PyWaw Summit 2016 website",
+  "repository": "https://github.com/PyWaw/2016.summit.pywaw.org",
+  "private": true,
   "version": "2.0.0",
+  "scripts": {
+    "postinstall": "node node_modules/bower/bin/bower install"
+  },
   "devDependencies": {
     "bower": "^1.4.2",
     "node-sass": "3.4.2"
