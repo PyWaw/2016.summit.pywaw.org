@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="cfp">
+  <h2 class="cfp__title">Call for Papers</h2>
+  <p class="cfp__description">
+    The conference will be held in English. Each talk will be 30 minutes long including Q&A (exceptionally, it can be
+    prolonged up to 60 minutes - please, state this explicitly in the form). If you want to propose more than one talk,
+    please submit the form for each talk separately. We will choose (at most) one that we think is the best.
+  </p>
+  <form class="cfp__form" method="POST">{% csrf_token %}
+    <h3>Speaker</h3>
+    <div class="cfp__controls">
+      {{ form.speaker_name.label_tag }}
+      {{ form.speaker_name }}
+      {{ form.speaker_name.errors }}
+      <small class="cfp__example">{{ form.speaker_name.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.speaker_email.label_tag }}
+      {{ form.speaker_email }}
+      {{ form.speaker_email.errors }}
+      <small class="cfp__example">{{ form.speaker_email.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.speaker_phone.label_tag }}
+      {{ form.speaker_phone }}
+      {{ form.speaker_phone.errors }}
+      <small class="cfp__example">{{ form.speaker_phone.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.speaker_tagline.label_tag }}
+      {{ form.speaker_tagline }}
+      {{ form.speaker_tagline.errors }}
+      <small class="cfp__example">{{ form.speaker_tagline.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.speaker_website.label_tag }}
+      {{ form.speaker_website }}
+      {{ form.speaker_website.errors }}
+      <small class="cfp__example">{{ form.speaker_website.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.speaker_location.label_tag }}
+      {{ form.speaker_location }}
+      {{ form.speaker_location.errors }}
+      <small class="cfp__example">{{ form.speaker_location.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.speaker_twitter.label_tag }}
+      {{ form.speaker_twitter }}
+      {{ form.speaker_twitter.errors }}
+      <small class="cfp__example">{{ form.speaker_twitter.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.speaker_github.label_tag }}
+      {{ form.speaker_github }}
+      {{ form.speaker_github.errors }}
+      <small class="cfp__example">{{ form.speaker_github.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.speaker_bio.label_tag }}
+      {{ form.speaker_bio }}
+      {{ form.speaker_bio.errors }}
+      <small class="cfp__example">{{ form.speaker_bio.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.speaker_location.label_tag }}
+      {{ form.speaker_location }}
+      {{ form.speaker_location.errors }}
+      <small class="cfp__example">{{ form.speaker_location.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.speaker_previous_talks.label_tag }}
+      {{ form.speaker_previous_talks }}
+      {{ form.speaker_previous_talks.errors }}
+      <small class="cfp__example">{{ form.speaker_previous_talks.help_text }}</small>
+    </div>
+    <h3>Talk</h3>
+    <div class="cfp__controls">
+      {{ form.talk_title.label_tag }}
+      {{ form.talk_title }}
+      {{ form.talk_title.errors }}
+      <small class="cfp__example">{{ form.talk_title.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.talk_description.label_tag }}
+      {{ form.talk_description }}
+      {{ form.talk_description.errors }}
+      <small class="cfp__example">{{ form.talk_description.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.talk_level.label_tag }}
+      {{ form.talk_level }}
+      {{ form.talk_level.errors }}
+      <small class="cfp__example">{{ form.talk_level.help_text }}</small>
+    </div>
+    <h3>Sponsorship</h3>
+    <div class="cfp__controls">
+      {{ form.sponsorship_interested.label_tag }}
+      {{ form.sponsorship_interested }}
+      {{ form.sponsorship_interested.errors }}
+      <small class="cfp__example">{{ form.sponsorship_interested.help_text }}</small>
+    </div>
+    <div class="cfp__controls">
+      {{ form.sponsorship_email.label_tag }}
+      {{ form.sponsorship_email }}
+      {{ form.sponsorship_email.errors }}
+      <small class="cfp__example">{{ form.sponsorship_email.help_text }}</small>
+    </div>
+    <h3>Other</h3>
+    <div class="cfp__controls">
+      {{ form.comments.label_tag }}
+      {{ form.comments }}
+      {{ form.comments.errors }}
+      <small class="cfp__example">{{ form.comments.help_text }}</small>
+    </div>
+    <input class="cfp__submit" type="submit" value="Submit">
+  </form>
+</div>
+
+{% endblock %}

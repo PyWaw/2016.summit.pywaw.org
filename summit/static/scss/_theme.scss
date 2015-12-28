@@ -1423,3 +1423,46 @@ Attendees list
   margin-left: 7px;
   background-size: cover;
 }
+
+.cfp {
+  @include grid-row();
+}
+
+.cfp__title {
+  @include section-title();
+  padding-top: 60px;
+}
+
+.cfp__description {
+  @include grid-column(9);
+  margin-top: 0;
+}
+
+.cfp__form {
+  @include grid-column($columns: 5, $last-column:true);
+  @media #{$small-only} {
+    @include grid-column(12);
+  }
+  @media #{$medium-only} {
+    @include grid-column(12);
+  }
+}
+
+.cfp__submit {
+  @include custom-button();
+  background-color: $orange-color;
+}
+
+.cfp__controls {
+  margin-bottom: 10px;
+  input, textarea {
+    margin-bottom: 0;
+  }
+  label {
+    color: $gray-second-color;
+  }
+}
+
+.cfp__example {
+  font-size: 13px;
+}
