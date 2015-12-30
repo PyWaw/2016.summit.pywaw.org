@@ -3,7 +3,7 @@
 ## Dependencies
 
 * Python 3.5
-* Node.js
+* Node.js / npm
 
 ### Setup local environment
 
