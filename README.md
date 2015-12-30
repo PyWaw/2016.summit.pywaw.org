@@ -1,8 +1,9 @@
 # PyWaw Summit 2016 website
 
-## Development 
+## Dependencies
 
-Please use Python 3.5.
+* Python 3.5
+* Node.js
 
 ### Setup local environment
 
